@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Demo6</string>
     <string name="app_version">1.0.1</string>
-    <string name="bottom1">创建新文件夹</string>
-    <string name="bottom3">删除文件夹</string>
-    <string name="bottom2">创建新文件</string>
-    <string name="icon_mag">图标</string>
+    <string name="botton1">新建文件夹</string>
+    <string name="botton3">退出程序</string>
+    <string name="botton2">新建TXT文件</string>
+    <string name="image_1">图标</string>
+    <string name="textview">请输入文件名后再操作</string>
+    <string name="edittext_1" />
 </resources>
