@@ -2,10 +2,8 @@ package com.example.demo6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Environment;
-import android.text.Editable;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,14 +30,9 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 folderName[0] = String.valueOf(editText.getText());
-                int id = v.getId();
-                switch (id){
-                    case R.id.button1:
-                        Log.i("TAG:","状态"+folderName[0]);
-                        dt.addFolder(folderName[0]);
-                        break;
-                }
+                folderName[0] = String.valueOf(editText.getText());
+                Log.i("TAG:","状态"+folderName[0]);
+                dt.addFolder(folderName[0]);
 
             }
         });
@@ -48,12 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 folderName[0] = "";
                 folderName[0] = String.valueOf(editText.getText());
-                int id = v.getId();
-                switch (id){
-                    case R.id.button2:
-                        dt.addFileText(folderName[0]);
-                        break;
-                }
+                dt.addFileText(folderName[0]);
 
             }
         });

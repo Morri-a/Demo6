@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class DocumentTool {
+public class DocumentTool {//工具类。
 
 
     public static void addFolder(String folderName){//创建文件夹
@@ -27,7 +27,7 @@ public class DocumentTool {
         }
     }
 
-    public static void addFileText(String folderName){
+    public static void addFileText(String folderName){//创建TEXT文件
         if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
             File sdCard = Environment.getExternalStorageDirectory();
             File newFolder = new File(sdCard+File.separator+folderName);
@@ -37,7 +37,7 @@ public class DocumentTool {
             if (!txtFile.exists()) {
                 try {
                     FileOutputStream outputStream = new FileOutputStream(txtFile);
-                    outputStream.write("你好呀，我们是奥利给组。".getBytes());//写操作
+                    outputStream.write("你好呀，我们是奥利给小组。".getBytes());//写操作
                     outputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -45,7 +45,7 @@ public class DocumentTool {
             }
         }
     }
-    public static void exit(){
+    public static void exit(){//退出程序
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 }
